@@ -1,0 +1,7 @@
+subscription_analytics:
+  target: local
+  outputs:
+    local:
+      type: duckdb
+      path: revenue.duckdb
+      threads: 1

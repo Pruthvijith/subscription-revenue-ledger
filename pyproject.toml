@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools==84.2.1", "wheel==0.48.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "subscription-revenue-ledger"
+version = "0.1.0"
+requires-python = ">=3.12,<3.13"
+description = "Revision-aware monthly recurring revenue ledger"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pyflakes==3.4.0"]
+
+[project.scripts]
+revenue-ledger = "revenue_ledger.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+

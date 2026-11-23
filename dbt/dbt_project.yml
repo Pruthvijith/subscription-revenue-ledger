@@ -1,0 +1,7 @@
+name: subscription_analytics
+version: '1.0'
+config-version: 2
+profile: subscription_analytics
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
