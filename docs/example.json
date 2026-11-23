@@ -1,0 +1,16 @@
+{
+  "changes": 254,
+  "account_month": 1440,
+  "rejects": 1,
+  "receipts": 3,
+  "december": {
+    "month_end": "2026-12-31",
+    "opening_cents": 843300,
+    "starts_cents": 0,
+    "expansion_cents": 0,
+    "contraction_cents": 0,
+    "churn_cents": 0,
+    "closing_cents": 843300
+  },
+  "reordered_replay_equal": true
+}

@@ -1,0 +1,42 @@
+Local execution | Python 3.12.14 | Linux
+
+$ python -m unittest discover -s tests -v
+test_conflict_rolls_back_batch_including_quarantine (test_ledger.LedgerTests.test_conflict_rolls_back_batch_including_quarantine) ... ok
+test_dbt_model_and_reference_ledger_agree (test_ledger.LedgerTests.test_dbt_model_and_reference_ledger_agree) ... ok
+test_late_revision_preserves_churn_and_identity (test_ledger.LedgerTests.test_late_revision_preserves_churn_and_identity) ... ok
+test_retries_and_invalid_payloads (test_ledger.LedgerTests.test_retries_and_invalid_payloads) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.005s
+
+OK
+exit 0
+
+$ python -m pyflakes src tests scripts
+
+exit 0
+
+$ python -m compileall -q src scripts tests
+
+exit 0
+
+$ python scripts/demo.py
+{
+  "changes": 254,
+  "account_month": 1440,
+  "rejects": 1,
+  "receipts": 3,
+  "december": {
+    "month_end": "2026-12-31",
+    "opening_cents": 843300,
+    "starts_cents": 0,
+    "expansion_cents": 0,
+    "contraction_cents": 0,
+    "churn_cents": 0,
+    "closing_cents": 843300
+  },
+  "reordered_replay_equal": true
+}
+exit 0
+
+Second independent demo run: matching decision outputs (elapsed timings excluded).
