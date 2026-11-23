@@ -10,7 +10,7 @@ description = "Revision-aware monthly recurring revenue ledger"
 dependencies = []
 
 [project.optional-dependencies]
-dev = ["pyflakes==3.4.0"]
+dev = ["pyflakes==4.1.0"]
 
 [project.scripts]
 revenue-ledger = "revenue_ledger.cli:main"
